@@ -3,9 +3,8 @@
 	width: 620px;
 	height: 620px;
 	color: #fff;
-	overflow: hidden;
-
-	.main-ref {
+	display: inline-block;
+	&__link {
 		display: inline-block;
 		position: absolute;
 		top: 8px;
@@ -14,94 +13,85 @@
 		height: inherit;
 		color: #fff;
 		text-decoration: none;
-		z-index: 0;
-	}
-
-	.main-ref:hover {
+		z-index: 5;
+		&:hover {
 		background: #fff;
 		opacity: 0.15;
+		}
 	}
-
 	&__img {
 		border-radius: 1%;
 		position: absolute;
 		z-index: -1;
 	}
-
 	&__category {
 		display: block;
+		width: 40px;
+		height: 15px;
+		margin-left: 280px;
 		text-decoration: none;
 		color: #fff;
 		margin-top: 345px;
-		text-align: center;
+		margin-bottom: 3px;
 		text-transform: uppercase;
 		font-size: 10px;
+		letter-spacing: 3px;
 		font-weight: bold;
-		transform: scaleX(1.4);
 		line-height: 1.6;
+		position: relative;
+		z-index: 10;
 	}
-
 	&__category:hover {
 		color: #d3d3d3;
 	}
-
 	&__title {
 		text-align: center;
-		font-size: 26px;
+		font-size: 29px;
 		font-weight: bold;
-		margin: 0 150px;
-		line-height: 1.3;
-		transform: scaleX(1.25);
+		margin: 0 120px;
+		line-height: 1.11;
+		letter-spacing: 2px;
 	}
-
 	&__text {
 		text-align: center;
-		margin: 17px 150px;
-		transform: scaleX(1.1);
+		margin: 19px 150px;
 	}
-
-	&__container {
-		margin-left: -3px;
-		margin-top: 21px;
+	&__info {
+		margin-top: 25px;
+		font-size: 11px;
+		letter-spacing: 1px;
 		text-align: center;
 		text-transform: uppercase;
 		font-weight: bold;
-		transform: scale(0.831, 0.63);
 		color: #aaa;
 	}
-
+	&__author {
+		display: inline-block;
+	}
+	&__date {
+		display: inline-block;
+		margin-right: 10px;
+	}
 	&__views {
-		margin-left: 30px;
+		display: inline-block;
+		margin-right: 10px;
 	}
-
+	&__views-counter {
+		display: inline-block;
+	}
 	&__comments {
-		margin-left: 30px;
 		padding-right: 0;
+		position: relative;
+		z-index: 10;
 	}
+	&__comments-counter {
 
-	&__comments a {
+	}
+	&__comments-link {
 		color: #aaa;
 		text-decoration: none;
+		&:hover {
+			color: #d3d3d3;
+		}
 	}
-
-	&__comments a:hover {
-		color: #d3d3d3;
-	}
-}
-
-.icon {
-	position: absolute;
-	fill: currentcolor;
-}
-
-.icon-views {
-	transform: scale(0.08, 0.11);
-	bottom: -67px;
-	right: 67px;
-}
-
-.icon-comments {
-	transform: scale(0.088, 0.12);
-	bottom: -67px;
-	right: -11px;
 }
