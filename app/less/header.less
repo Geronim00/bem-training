@@ -14,9 +14,14 @@
 	}
 	a,
 	a:visited{
-		color: #000;
-    	text-decoration: none;
+		text-decoration: none;
     	outline: none;
+	}
+	&__logo,
+	&__logo:visited,
+	&__nav a,
+	&__nav a:visited{
+		color: #000;
 	}
 	ul{
 	list-style: none;
@@ -25,22 +30,28 @@
 		display: inline-block;
     	max-width: 370px;
     	min-height: 70px;
-    	font: 900 28px/35px "Proxima Nova", "Arial", sans-serif;
+    	font: 900 27px/34px "Proxima Nova", "Arial", sans-serif;
+    	font-stretch: semi-condensed;
     	color: #000;
-    	-webkit-font-smoothing: antialiased;
-    	margin: 0;
+    	margin: -3px 0 0 -7px;
     	padding: 0;
-    	background: blue;
 	}
 	&__nav li{
-	display: inline-block;
+		display: inline-block;
+
 	}
 	&__nav li:after{
-	content: ',';
-	margin-left: -9px;
+		content: ',';
+		margin-left: -9px;
+	}
+	&__nav li:last-child:after{
+		display: none;
 	}
 	&__broadcast{
 
+	}
+	&__broadcast a{
+		color: #003cff !important;
 	}
 	&__people{
 
@@ -57,33 +68,79 @@
 	&__search{
 		display: inline-block;
 		vertical-align: top;
-		margin: 0;
-		padding:0;
+		margin-left: 82px;
+		margin-top: 1px;
 		font: 12px/1 "Arial", sans-serif;
-		background: yellow;
+		& input{
+			width: 137px;
+			height: 23px;
+			padding-left: 13px;
+			border: 1px solid #c6c6c6;
+			border-radius: 14px;
+			color: #2a2a2a;
+			// opacity: 0;
+			transition: opacity 0.1s;
+			outline: none;
+			&:hover{
+				opacity: 1;
+			}
+			&:focus{
+				opacity: 1;
+			}
+		}
+		& button{
+			position: absolute;
+			top: 53px;
+			right: 595px;
+			background: transparent;
+			border: none;
+			opacity: 0.25;
+		}
+
+
 	}
 	&__profile{
 		display: inline-block;
 		vertical-align: top;
 		margin-top: 0;
+		margin-right: 0;
+		padding-left: 10px;
 		text-transform: uppercase;
 		font: bold 12px/26px "Proxima Nova", "Arial", sans-serif;
 		& li{
 			display: inline-block;
+			margin-right: 3px;
 		}
 		&-login{
-			color: #c0c0c0 !important;
-
+			display: inline-block;
+			border: 1px solid #d1d1d1;
+			color: #c0c0c0;
+			padding: 0 10px;
+			border-radius: 3px;
 		}
 		&-signup{
+			display: inline-block;
+			border: 1px solid #0b28fb;
 			background-color: #0b28fb;
-    		border-color: #0b28fb;
-    		color: #fff !important;
+    		color: #fff;
+    		padding: 0 10px;
+    		border-radius: 3px;
 		}
 	}
 	&__services{
-	display: inline-block;
-	margin-right: 0;
+		display: inline-block;
+		float: right;
+		text-transform: uppercase;
+		font: bold 12px/1 "Proxima Nova", "Arial", sans-serif;
+		margin-top: -17px;
+	}
+	&__news{
+		color: #C0C0C0;
+		padding-right: 22px;
+	}
+	&__talks{
+		color: #C0C0C0;
+		padding-right: 22px;
 	}
 }
 
