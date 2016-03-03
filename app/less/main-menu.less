@@ -1,0 +1,27 @@
+.main-menu {
+	&__list {
+		display: inline-block;
+		width: 355px;
+	}
+	&__item {
+		float: left;
+		text-decoration: none;
+		font-family: "Arial", sans-serif;
+		font-size: 26px;
+		line-height: 34px;
+		font-weight: 900;
+		margin-right: 10px;
+		color: #000;
+		&:first-child{
+			color: #1B50FD;
+		}
+		&:after {
+			content: ',';
+			margin-left: -8px;
+			color: #000;
+		}
+		&:last-child:after {
+			display: none;
+		}
+	}
+}
